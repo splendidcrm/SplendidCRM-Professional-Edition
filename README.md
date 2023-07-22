@@ -30,30 +30,61 @@ When building yourself, please note that we prefer to build the ASP.NET code sep
 
 ### ASP.NET Web Site Build
 Building should be as simple as loading the SplendidCRM5_VS2017.csproj project file into Visual Studio 2017 or higher. SplendidCRM uses very specific builds of certain external libraries so as to minimize version dependencies across libraries, we do not use package manager.  Instead, we have included a BackupBin2012 folder with those libraries.
+
 1. AjaxControlToolkit.dll
 2. Antlr3.Runtime.dll
-3. BouncyCastle.Crypto.dll
-4. CKEditor.NET.dll
-5. Common.Logging.dll
-6. DocumentFormat.OpenXml.dll
-7. ICSharpCode.SharpZLib.dll
-8. MailKit.dll
-9. Microsoft.AspNet.SignalR.Core.dll
-10. Microsoft.AspNet.SignalR.SystemWeb.dll
-11. Microsoft.Owin.dll
-12. Microsoft.Owin.Host.SystemWeb.dll
-13. Microsoft.Owin.Security.dll
-14. Microsoft.Web.Infrastructure.dll
-15. MimeKit.dll
-16. Newtonsoft.Json.dll
-17. Owin.dll
-18. RestSharp.dll
-19. Spring.Rest.dll
-20. Spring.Social.Core.dll
-21. System.Web.Optimization.dll
-22. TweetinCore.dll
-23. Twilio.Api.dll
-24. WebGrease.dll
+3. Asterisk.NET.dll
+4. BouncyCastle.Crypto.dll
+5. CKEditor.NET.dll
+6. Common.Logging.dll
+7. DocumentFormat.OpenXml.dll
+8. Google.Apis.Auth.dll
+9. Google.Apis.Core.dll
+10. Google.Apis.dll
+11. ICSharpCode.SharpZLib.dll
+12. MailKit.dll
+13. Microsoft.AspNet.SignalR.Core.dll
+14. Microsoft.AspNet.SignalR.SystemWeb.dll
+15. Microsoft.Exchange.WebServices.Auth.dll
+16. Microsoft.Exchange.WebServices.dll
+17. Microsoft.IdentityModel.dll
+18. Microsoft.IdentityModel.Extensions.dll
+19. Microsoft.IdentityModel.JsonWebTokens.dll
+20. Microsoft.IdentityModel.Logging.dll
+21. Microsoft.IdentityModel.Protocols.dll
+22. Microsoft.IdentityModel.Protocols.WsFederation.dll
+23. Microsoft.IdentityModel.Tokens.dll
+24. Microsoft.IdentityModel.Tokens.Saml.dll
+25. Microsoft.IdentityModel.Xml.dll
+26. Microsoft.Owin.dll
+27. Microsoft.Owin.Host.SystemWeb.dll
+28. Microsoft.Owin.Security.dll
+29. Microsoft.ReportViewer.Common.dll
+30. Microsoft.ReportViewer.DataVisualization.DLL
+31. Microsoft.ReportViewer.ProcessingObjectModel.DLL
+32. Microsoft.ReportViewer.WebForms.DLL
+33. Microsoft.SqlServer.Types.dll
+34. Microsoft.Threading.Tasks.dll
+35. Microsoft.Web.Infrastructure.dll
+36. MimeKit.dll
+37. Newtonsoft.Json.dll
+38. oAuthConnection.dll
+39. Owin.dll
+40. PayPal.dll
+41. RestSharp.dll
+42. Spring.Rest.dll
+43. Spring.Social.Core.dll
+44. Streaminvi.dll
+45. System.IdentityModel.Tokens.Jwt.dll
+46. System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll
+47. System.Web.Optimization.dll
+48. Tools.dll
+49. TweetinCore.dll
+50. Tweetinvi.dll
+51. Twilio.dll
+52. TwitterToken.dll
+53. WebGrease.dll
+54. Zlib.Portable.dll
 
 ### React Build
 We recommend that you use yarn to bulid the React files. We are currently using version 1.22, npm version 6.14 adn node 16.20. These versions can be important as newer versions can have build failures. The first time you build, you will need to have yarn install all packages.
