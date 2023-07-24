@@ -1,0 +1,89 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="DefaultView.master.cs" Inherits="SplendidCRM.Themes.Mobile.DefaultView" %>
+<%@ Import Namespace="SplendidCRM" %>
+<script runat="server">
+/**********************************************************************************************************************
+ * SplendidCRM is a Customer Relationship Management program created by SplendidCRM Software, Inc. 
+ * Copyright (C) 2005-2023 SplendidCRM Software, Inc. All rights reserved.
+ *
+ * Any use of the contents of this file are subject to the SplendidCRM Professional Source Code License 
+ * Agreement, or other written agreement between you and SplendidCRM ("License"). By installing or 
+ * using this file, you have unconditionally agreed to the terms and conditions of the License, 
+ * including but not limited to restrictions on the number of users therein, and you may not use this 
+ * file except in compliance with the License. 
+ * 
+ * SplendidCRM owns all proprietary rights, including all copyrights, patents, trade secrets, and 
+ * trademarks, in and to the contents of this file.  You will not link to or in any way combine the 
+ * contents of this file or any derivatives with any Open Source Code in any manner that would require 
+ * the contents of this file to be made available to any third party. 
+ * 
+ * IN NO EVENT SHALL SPLENDIDCRM BE RESPONSIBLE FOR ANY DAMAGES OF ANY KIND, INCLUDING ANY DIRECT, 
+ * SPECIAL, PUNITIVE, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES.  Other limitations of liability 
+ * and disclaimers set forth in the License. 
+ * 
+ *********************************************************************************************************************/
+</script>
+<!DOCTYPE HTML>
+<html id="htmlRoot" runat="server">
+<head runat="server">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script type="text/javascript">
+	var sDebugSQL = '';
+	var ChangeDate = null;
+	function CalendarPopup(ctlDate, clientX, clientY)
+	{
+		alert('The Calendar popup is not supported on a mobile browser.');
+	}
+	</script>
+	<script type="text/javascript" src="<%# Application["scriptURL"] %>ModulePopupScripts.aspx?LastModified=<%# Server.UrlEncode(Sql.ToString(Application["Modules.LastModified"])) + "&UserID=" + Security.USER_ID.ToString() %>"></script>
+	<%# Application["CONFIG.external_scripts_mobile"] %>
+<script type="text/javascript">
+// 09/07/2013 Paul.  Change rootURL to sREMOTE_SERVER. 
+var sREMOTE_SERVER    = '<%# Application["rootURL"] %>';
+// 04/23/2018 Paul.  Build in javascript to allow proxy handling. 
+sREMOTE_SERVER        = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '') + '<%# Sql.ToString(Application["rootURL"]) %>';
+</script>
+</head>
+
+<body style="background-color: white;">
+<form id="frmMain" method="post" runat="server">
+<script runat="server">
+// 10/22/2009 Paul.  Use the AJAX Toolkit technique to combine ScriptResource.axd files.  .NET 3.5 SP1 has a CompositeScript group.
+// 11/23/2009 Paul.  We will never need the scripts to be in debug mode. We also do not want localization. 
+</script>
+<ajaxToolkit:ToolkitScriptManager ID="mgrAjax" CombineScripts="true" EnableScriptGlobalization="true" EnableScriptLocalization="false" ScriptMode="Release" runat="server" />
+
+<div id="divHeader" visible="<%# SplendidCRM.Security.IsAuthenticated() %>" runat="server">
+	<span id="spnTabMenu">
+		<table width="100%" border="0" cellpadding="2" cellspacing="0" style="<%= Sql.IsEmptyString(Application["CONFIG.header_background"]) ? String.Empty : "background-image: url(" + Sql.ToString(Session["themeURL"]) + Sql.ToString(Application["CONFIG.header_background"]) + ");" %>">
+			<tr>
+				<td>
+					<%@ Register TagPrefix="SplendidCRM" Tagname="TabMenu" Src="TabMenu.ascx" %>
+					<SplendidCRM:TabMenu ID="ctlTabMenu" Runat="Server" />
+<%
+if ( !SplendidCRM.Security.IsWindowsAuthentication() && SplendidCRM.Security.IsAuthenticated() )
+	{
+	%>
+	&nbsp;|&nbsp; <asp:HyperLink ID="lnkLogout" Text='<%# L10n.Term(".LBL_LOGOUT") %>' NavigateUrl="~/Users/Logout.aspx" CssClass="myAreaLink" Runat="server" />
+	<%
+	}
+%>
+				</td>
+			</tr>
+		</table>
+	</span>
+</div>
+<asp:ContentPlaceHolder ID="cntUnifiedSearch" Visible="false" runat="server" />
+<asp:ContentPlaceHolder ID="cntLastViewed" Visible="false" runat="server" />
+<asp:ContentPlaceHolder ID="cntSidebar" Visible="false" runat="server" />
+<asp:ContentPlaceHolder ID="cntBody" runat="server" />
+
+<br />
+<%@ Register TagPrefix="SplendidCRM" Tagname="Copyright" Src="~/_controls/Copyright.ascx" %>
+<SplendidCRM:Copyright ID="ctlCopyright" Runat="Server" />
+<div align="center">
+	<asp:Button ID="lnkFullSite" CommandName="FullSite" OnCommand="Page_Command" CssClass="myAreaLink" Text='<%# L10n.Term(".LBL_FULL_SITE") %>' Runat="server" />
+</div>
+</form>
+</body>
+</html>
+

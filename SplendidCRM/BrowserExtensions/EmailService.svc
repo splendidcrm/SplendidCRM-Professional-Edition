@@ -1,0 +1,1 @@
+<%@ ServiceHost Language="C#" Service="SplendidCRM.BrowserExtensions.EmailService" CodeBehind="EmailService.svc.cs" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

@@ -1,0 +1,1 @@
+<%@ ServiceHost Language="C#" Service="SplendidCRM.Users.ReassignRest" CodeBehind="ReassignRest.svc.cs" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

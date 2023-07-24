@@ -1,0 +1,63 @@
+<%@ Control CodeBehind="Opportunities.ascx.cs" Language="c#" AutoEventWireup="false" Inherits="SplendidCRM.Leads.Opportunities" %>
+<script runat="server">
+/**********************************************************************************************************************
+ * SplendidCRM is a Customer Relationship Management program created by SplendidCRM Software, Inc. 
+ * Copyright (C) 2005-2023 SplendidCRM Software, Inc. All rights reserved.
+ *
+ * Any use of the contents of this file are subject to the SplendidCRM Professional Source Code License 
+ * Agreement, or other written agreement between you and SplendidCRM ("License"). By installing or 
+ * using this file, you have unconditionally agreed to the terms and conditions of the License, 
+ * including but not limited to restrictions on the number of users therein, and you may not use this 
+ * file except in compliance with the License. 
+ * 
+ * SplendidCRM owns all proprietary rights, including all copyrights, patents, trade secrets, and 
+ * trademarks, in and to the contents of this file.  You will not link to or in any way combine the 
+ * contents of this file or any derivatives with any Open Source Code in any manner that would require 
+ * the contents of this file to be made available to any third party. 
+ * 
+ * IN NO EVENT SHALL SPLENDIDCRM BE RESPONSIBLE FOR ANY DAMAGES OF ANY KIND, INCLUDING ANY DIRECT, 
+ * SPECIAL, PUNITIVE, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES.  Other limitations of liability 
+ * and disclaimers set forth in the License. 
+ * 
+ *********************************************************************************************************************/
+</script>
+<script type="text/javascript">
+function OpportunityPopup()
+{
+	// 08/21/2010 Paul.  Don't include the LEAD_ID in the query as it will not any new leads to be selected. 
+	return ModulePopup('Opportunities', '<%= txtOPPORTUNITY_ID.ClientID %>', null, 'ClearDisabled=1', true, null);
+}
+</script>
+<input ID="txtOPPORTUNITY_ID" type="hidden" Runat="server" />
+<%-- 06/03/2015 Paul.  Combine ListHeader and DynamicButtons. --%>
+<%@ Register TagPrefix="SplendidCRM" Tagname="SubPanelButtons" Src="~/_controls/SubPanelButtons.ascx" %>
+<SplendidCRM:SubPanelButtons ID="ctlDynamicButtons" Module="Opportunities" SubPanel="divLeadsOpportunities" Title="Opportunities.LBL_MODULE_NAME" Runat="Server" />
+
+<div id="divLeadsOpportunities" style='<%= "display:" + (CookieValue("divLeadsOpportunities") != "1" ? "inline" : "none") %>'>
+	<asp:Panel ID="pnlNewRecordInline" Visible='<%# !Sql.ToBoolean(Application["CONFIG.disable_editview_inline"]) %>' Style="display:none" runat="server">
+		<%@ Register TagPrefix="SplendidCRM" Tagname="NewRecord" Src="~/Opportunities/NewRecord.ascx" %>
+		<SplendidCRM:NewRecord ID="ctlNewRecord" Width="100%" EditView="EditView.Inline" ShowCancel="true" ShowHeader="false" ShowFullForm="true" ShowTopButtons="true" Runat="Server" />
+	</asp:Panel>
+	
+	<%@ Register TagPrefix="SplendidCRM" Tagname="SearchView" Src="~/_controls/SearchView.ascx" %>
+	<SplendidCRM:SearchView ID="ctlSearchView" Module="Opportunities" SearchMode="SearchSubpanel" IsSubpanelSearch="true" ShowSearchTabs="false" ShowDuplicateSearch="false" ShowSearchViews="false" Visible="false" Runat="Server" />
+	
+	<SplendidCRM:SplendidGrid id="grdMain" SkinID="grdSubPanelView" AllowPaging="<%# !PrintView %>" EnableViewState="true" runat="server">
+		<Columns>
+			<asp:TemplateColumn HeaderText="" ItemStyle-Width="1%" ItemStyle-HorizontalAlign="Left" ItemStyle-Wrap="false">
+				<ItemTemplate>
+					<%-- 07/08/2021 Paul.  GetRecordAccess requires Container as first parameter. --%>
+					<asp:ImageButton Visible='<%# !bEditView && SplendidCRM.Security.GetRecordAccess(Container, m_sMODULE, "edit", "ASSIGNED_USER_ID") >= 0 && !Sql.IsProcessPending(Container) %>' CommandName="Opportunities.Edit" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "OPPORTUNITY_ID") %>' OnCommand="Page_Command" CssClass="listViewTdToolsS1" AlternateText='<%# L10n.Term(".LNK_EDIT") %>' SkinID="edit_inline" Runat="server" />
+					<asp:LinkButton  Visible='<%# !bEditView && SplendidCRM.Security.GetRecordAccess(Container, m_sMODULE, "edit", "ASSIGNED_USER_ID") >= 0 && !Sql.IsProcessPending(Container) %>' CommandName="Opportunities.Edit" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "OPPORTUNITY_ID") %>' OnCommand="Page_Command" CssClass="listViewTdToolsS1" Text='<%# L10n.Term(".LNK_EDIT") %>' Runat="server" />
+					&nbsp;
+					<span onclick="return confirm('<%= L10n.TermJavaScript(".NTC_DELETE_CONFIRMATION") %>')">
+						<%-- 07/08/2021 Paul.  GetRecordAccess requires Container as first parameter. --%>
+						<asp:ImageButton Visible='<%# SplendidCRM.Security.GetRecordAccess(Container, m_sMODULE, "remove", "ASSIGNED_USER_ID") >= 0 %>' CommandName="Opportunities.Delete" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "OPPORTUNITY_ID") %>' OnCommand="Page_Command" CssClass="listViewTdToolsS1" AlternateText='<%# L10n.Term(".LNK_DELETE") %>' SkinID="delete_inline" Runat="server" />
+						<asp:LinkButton  Visible='<%# SplendidCRM.Security.GetRecordAccess(Container, m_sMODULE, "remove", "ASSIGNED_USER_ID") >= 0 %>' CommandName="Opportunities.Delete" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "OPPORTUNITY_ID") %>' OnCommand="Page_Command" CssClass="listViewTdToolsS1" Text='<%# L10n.Term(".LNK_DELETE") %>' Runat="server" />
+					</span>
+				</ItemTemplate>
+			</asp:TemplateColumn>
+		</Columns>
+	</SplendidCRM:SplendidGrid>
+</div>
+

@@ -1,0 +1,1 @@
+<%@ Page language="c#" Codebehind="Image.aspx.cs" AutoEventWireup="false" Inherits="SplendidCRM.KBDocuments.Image" %><%@ OutputCache Duration="86400" VaryByParam="ID" %><head visible="false" runat="server" />

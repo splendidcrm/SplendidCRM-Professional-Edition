@@ -1,0 +1,341 @@
+/**********************************************************************************************************************
+ * SplendidCRM is a Customer Relationship Management program created by SplendidCRM Software, Inc. 
+ * Copyright (C) 2005-2023 SplendidCRM Software, Inc. All rights reserved.
+ *
+ * Any use of the contents of this file are subject to the SplendidCRM Professional Source Code License 
+ * Agreement, or other written agreement between you and SplendidCRM ("License"). By installing or 
+ * using this file, you have unconditionally agreed to the terms and conditions of the License, 
+ * including but not limited to restrictions on the number of users therein, and you may not use this 
+ * file except in compliance with the License. 
+ * 
+ * SplendidCRM owns all proprietary rights, including all copyrights, patents, trade secrets, and 
+ * trademarks, in and to the contents of this file.  You will not link to or in any way combine the 
+ * contents of this file or any derivatives with any Open Source Code in any manner that would require 
+ * the contents of this file to be made available to any third party. 
+ * 
+ * IN NO EVENT SHALL SPLENDIDCRM BE RESPONSIBLE FOR ANY DAMAGES OF ANY KIND, INCLUDING ANY DIRECT, 
+ * SPECIAL, PUNITIVE, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES.  Other limitations of liability 
+ * and disclaimers set forth in the License. 
+ * 
+ *********************************************************************************************************************/
+.SurveyResultsPagination
+{
+	font-weight: normal;
+	text-align: right;
+	border-bottom: solid 1px #bbbbbb;
+}
+.SurveyResultsSubHeader
+{
+	padding-right: 20px;
+	color: #000000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	background-color: #ffffff;
+}
+.SurveyResultsTextbox
+{
+	width: 100%;
+}
+.SurveyResultsTextboxDate
+{
+	white-space: nowrap;
+	width: 5%;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsTextboxText
+{
+	width: 90%;
+	padding-left: 10px;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsTextboxView
+{
+	width: 5%;
+	padding-left: 10px;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsTextboxView a
+{
+	text-decoration: none;
+}
+.SurveyResultsTextArea
+{
+	width: 100%;
+}
+.SurveyResultsTextResponses
+{
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsTextResponsesDate
+{
+	white-space: nowrap;
+	width: 5%;
+}
+.SurveyResultsTextResponsesText
+{
+	width: 90%;
+	padding-left: 10px;
+}
+.SurveyResultsTextResponsesView
+{
+	width: 5%;
+	padding-left: 10px;
+}
+.SurveyResultsTextboxMultiple
+{
+	width: 100%;
+}
+.SurveyResultsTextboxNumerical
+{
+	width: 100%;
+}
+.SurveyResultsDate
+{
+	width: 100%;
+}
+.SurveyResultsDemographic
+{
+	width: 100%;
+}
+.SurveyResultsRadio
+{
+	width: 100%;
+}
+.SurveyResultsCheckbox
+{
+	width: 100%;
+}
+.SurveyResultsDropdown
+{
+	width: 100%;
+}
+.SurveyResultsRanking
+{
+	width: 100%;
+}
+.SurveyResultsRatingScale
+{
+	width: 100%;
+}
+.SurveyResultsRadioMatrix
+{
+	width: 100%;
+}
+.SurveyResultsCheckboxMatrix
+{
+	width: 100%;
+}
+.SurveyResultsDropdownMatrix
+{
+	width: 100%;
+}
+.SurveyResultsAnswerHeader
+{
+	background-color: #eeeeee;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsResponseHeader
+{
+	background-color: #eeeeee;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	border-left: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsAnswerMatrixHeader
+{
+	background-color: #eeeeee;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsColumnMatrixHeader
+{
+	padding: 4px;
+	background-color: #cccccc;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+.SurveyResultsResponseMatrixHeader
+{
+	background-color: #eeeeee;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	border-left: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsResponseMatrixHeaderTotal
+{
+	background-color: #eeeeee;
+	border-top: solid 1px #bbbbbb;
+	border-bottom: solid 1px #bbbbbb;
+	border-left: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsAnswerMatrixOtherRow
+{
+	border: solid 1px #bbbbbb;
+	padding-bottom: 4px;
+}
+.SurveyResultsAnswerBody
+{
+	border-bottom: solid 1px #bbbbbb;
+	border-right: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsAnswerMatrixBody
+{
+	background-color: #eeeeee;
+	border-bottom: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsAnswerBody a
+{
+	text-decoration: none;
+}
+.SurveyResultsResponseBody
+{
+	vertical-align: top;
+	border-bottom: solid 1px #bbbbbb;
+	border-left: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsResponseMatrixBodyTotal
+{
+	vertical-align: top;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsResponseMatrixTotal
+{
+	vertical-align: top;
+	border-bottom: solid 1px #bbbbbb;
+	border-left: solid 1px #bbbbbb;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.SurveyResultsAllResponses
+{
+	width: 100%;
+	margin: 2px;
+	background-color: #eeeeee;
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+.SurveyResultsOther
+{
+	color: #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding-left: 4px;
+	padding-top: 5px;
+}
+.SurveyResultsOther a
+{
+	text-decoration: none;
+}
+.SurveyResultsChart
+{
+	padding-bottom: 30px;
+}
+/* 10/08/2014 Paul.  Add Range question type. */
+.SurveyResultsRange
+{
+	width: 100%;
+}
+
+.jqplot-xaxis-tick
+{
+	color: #000000;
+	font-size: 12px;
+}
+.jqplot-yaxis-tick
+{
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+}
+.jqplot-point-label
+{
+	font-size: 12px;
+}
+

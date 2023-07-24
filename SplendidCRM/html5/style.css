@@ -1,0 +1,65 @@
+/*
+ * Copyright (C) 2005-2023 SplendidCRM Software, Inc. All rights reserved.
+ *
+ * Any use of the contents of this file are subject to the SplendidCRM Professional Source Code License 
+ * Agreement, or other written agreement between you and SplendidCRM ("License"). By installing or 
+ * using this file, you have unconditionally agreed to the terms and conditions of the License, 
+ * including but not limited to restrictions on the number of users therein, and you may not use this 
+ * file except in compliance with the License. 
+ * 
+ */
+
+#lblError
+{
+	color: #ff0000;
+	white-space: pre-line;
+}
+
+/* http://reference.sitepoint.com/css/white-space */
+.RawMessage
+{
+	width: 100%;
+	white-space: pre-line;
+	background-color: Gray;
+	height: 200px;
+	font-size: 11px;
+	overflow-y: scroll;
+}
+.RawMessageHidden
+{
+	width: 100%;
+	white-space: pre-line;
+	background-color: Gray;
+	height: 200px;
+	font-size: 11px;
+	overflow-y: scroll;
+	display: none;
+}
+.RawMessageError
+{
+	width: 100%;
+	color: #ff0000;
+	white-space: pre-line;
+	font-size: 11px;
+}
+#divSelection
+{
+	vertical-align: top;
+	height: 100%;
+	overflow-y: scroll;
+}
+#divSelectionTitle
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #666666;
+	text-transform: uppercase;
+}
+#divHeader_OfflineCache
+{
+	vertical-align: top;
+	height: 60px;
+	overflow-y: scroll;
+}

@@ -1,0 +1,140 @@
+/* Common app styling */
+
+#content-main
+{
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	bottom: 50px; /* Same value as #content-footer's height */
+	overflow: auto; /* Enable scrollbars within main content section */
+}
+
+#content-footer
+{
+	background-color: #cecece;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px; /* Fixed footer height */
+	overflow: hidden; /* Disable scrollbars for footer */
+}
+
+.ModulePicture
+{
+	margin-left: 10px;
+	margin-right: 12px;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+}
+
+.ListModulePicture
+{
+	margin-left: 4px;
+	margin-right: 4px;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+}
+
+.tabOfficeAddinSearchForm
+{
+	padding: 2px 2px 2px 2px;
+}
+
+.tabOfficeAddinRelationship
+{
+	border-top: 1px solid #d8d8d8;
+}
+
+.tabOfficeAddinRelationship:hover
+{
+	border-top: 1px solid #d8d8d8;
+	background-color: #d8d8d8;
+}
+
+/* 03/20/2016 Paul.  Change the default to inherit background so we can hover over the row. */
+.tabStackedDetailViewDF
+{
+	padding: 0px 6px 1px 6px;
+	background-color: inherit;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.OfficeAddinActions
+{
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 4 4 4 4;
+	-moz-border-radius: 4 4 4 4;
+	border-radius: 4px 4px 4px 4px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 10px;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-decoration: none;
+	height: 20px;
+	margin-top: 0px;
+	margin-right: 0px;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #999999;
+}
+.OfficeAddinActions:hover
+{
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+.OfficeAddinOtherButton
+{
+	font-family: Arial;
+	color: #1a191a;
+	font-size: 12px;
+	background: #ffffff;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin: 0px;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+.OfficeAddinOtherButton:hover
+{
+	background: #dbdbdb;
+	text-decoration: none;
+}
+.OfficeAddinOtherPanel
+{
+	border: solid #dbdbdb 1px;
+	background: white;
+	z-index: 100;
+}
+.OfficeAddinMoreRecords
+{
+	background-color: #eeeeee;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
