@@ -312,7 +312,22 @@ namespace SplendidCRM
 					do
 					{
 						// 01/28/2017 Paul.  The Pull.Watermark changes with each call to GetEvents. 
-						results = service.FolderOperations.GetMessagesDelta(sFolderID, sEXCHANGE_WATERMARK, nPageSize);
+						// 07/19/2023 Paul.  If we get the Badly formed token error, try again without the watermark. 
+						try
+						{
+							results = service.FolderOperations.GetMessagesDelta(sFolderID, sEXCHANGE_WATERMARK, nPageSize);
+						}
+						catch(Exception ex)
+						{
+							if ( ex.Message.Contains("Badly formed token.") )
+							{
+								results = service.FolderOperations.GetMessagesDelta(sFolderID, String.Empty, nPageSize);
+							}
+							else
+							{
+								throw;
+							}
+						}
 						if ( !Sql.IsEmptyString(results.nextLink) )
 						{
 							sEXCHANGE_WATERMARK = results.nextLink.Split('?')[1];

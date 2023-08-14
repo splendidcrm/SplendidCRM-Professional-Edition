@@ -36,6 +36,8 @@ namespace Spring.Social.Office365.Api
 		void                Delete            (string     id    );
 		// 10/28/2022 Paul.  Change name to reflect function.  The entire message is not returned, just the ids. 
 		MessagePagination   GetMessageIds     (string     id, string search, string sort, int nPageOffset, int nPageSize);
+		// 07/18/2023 Paul.  Move to archive folder after import. 
+		MessagePagination   GetMessageIds     (string     id, string sort, int nPageOffset, int nPageSize);
 		MessagePagination   GetMessagesDelta  (string     id, string stateToken, int nPageSize);
 		// 10/28/2022 Paul.  Mailbox may include subfolders. 
 		IList<MailFolder>   GetChildFolders   (string     id, string sMAILBOX);

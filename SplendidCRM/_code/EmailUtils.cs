@@ -1634,6 +1634,7 @@ namespace SplendidCRM
 														{
 															try
 															{
+																// 07/19/2023 Paul.  Increase size of EXCHANGE_WATERMARK to 1000.  Badly formed token. 
 																SqlProcs.spINBOUND_EMAILS_ExchangeWatermark(gMAILBOX_ID, sEXCHANGE_WATERMARK, trn);
 																trn.Commit();
 															}
@@ -1707,6 +1708,7 @@ namespace SplendidCRM
 														{
 															try
 															{
+																// 07/19/2023 Paul.  Increase size of EXCHANGE_WATERMARK to 1000.  Badly formed token. 
 																SqlProcs.spINBOUND_EMAILS_ExchangeWatermark(gMAILBOX_ID, sEXCHANGE_WATERMARK, trn);
 																trn.Commit();
 															}

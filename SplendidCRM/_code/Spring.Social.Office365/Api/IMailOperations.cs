@@ -36,5 +36,7 @@ namespace Spring.Social.Office365.Api
 		void    Send            (string  id );
 		void    SendMail        (Message msg);
 		void    MarkAsUnread    (string  id );
+		// 07/18/2023 Paul.  Move to archive folder after import. 
+		void    Move            (string id, string destinationId);
 	}
 }

@@ -647,7 +647,8 @@ namespace Spring.Social.HubSpot.Api
 		public static long ToUnixTicks(DateTime dt)
 		{
 			long lTicks = 0;
-			if ( dt != null & dt != DateTime.MinValue )
+			// 07/25/2023 Paul.  Correct and syntax. 
+			if ( dt != null && dt != DateTime.MinValue )
 			{
 				// 04/24/2015 Paul.  Value is in local time, so we need to convert to UTC. 
 				lTicks = (dt.ToUniversalTime().Ticks - 621355968000000000) / 10000;

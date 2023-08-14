@@ -149,5 +149,14 @@ namespace Spring.Social.Office365.Api.Impl
 			}
 		}
 
+		// 07/18/2023 Paul.  Move to archive folder after import. 
+		public virtual void Move(string id, string destinationId)
+		{
+			// https://learn.microsoft.com/en-us/graph/api/message-move?view=graph-rest-1.0&tabs=http
+			string sURL = "/v1.0/me/messages/" + id + "/move";
+			Dictionary<string, object> data = new Dictionary<string,object>();
+			data.Add("destinationId", destinationId);
+			this.restTemplate.PostForObject<object>(sURL, data);
+		}
 	}
 }

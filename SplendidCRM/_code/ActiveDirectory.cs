@@ -1073,7 +1073,9 @@ namespace SplendidCRM
 				if ( !(Sql.IsEmptyString(sOAuthAccessToken) || dtOAuthExpiresAt == DateTime.MinValue ||  DateTime.Now > dtOAuthExpiresAt || bForceRefresh) )
 				{
 					Spring.Social.Office365.Api.IOffice365 office365 = Spring.Social.Office365.Office365Sync.CreateApi(Application, sOAuthAccessToken);
-					office365.MyProfileOperations.GetMyProfile();
+					// 07/18/2023 Paul.  Provide debug information. 
+					Spring.Social.Office365.Api.MyProfile profile = office365.MyProfileOperations.GetMyProfile();
+					Debug.WriteLine("Office365RefreshAccessToken: " + profile.UserPrincipalName + " " + profile.DisplayName);
 				}
 			}
 			catch

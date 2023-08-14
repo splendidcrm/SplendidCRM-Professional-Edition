@@ -153,6 +153,26 @@ namespace Spring.Social.Office365.Api.Impl
 			return pag;
 		}
 
+		// 07/18/2023 Paul.  Move to archive folder after import. 
+		public virtual MessagePagination GetMessageIds(string id, string sort, int nPageOffset, int nPageSize)
+		{
+			if ( nPageSize <= 0 )
+				nPageSize = 100;
+			// https://docs.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http
+			string sURL = "/v1.0/me/mailFolders/" + id + "/messages?$count=true&$select=id,lastModifiedDateTime&$top=" + nPageSize.ToString();
+			if ( nPageOffset > 0 )
+			{
+				sURL += "&$skip=" + nPageOffset.ToString();
+			}
+			if ( !Sql.IsEmptyString(sort) )
+			{
+				// https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#orderby-parameter
+				sURL += "&$orderby=" + HttpUtility.UrlEncode(sort);
+			}
+			MessagePagination pag = this.restTemplate.GetForObject<MessagePagination>(sURL);
+			return pag;
+		}
+
 		public virtual MessagePagination GetMessagesDelta(string id, string stateToken, int nPageSize)
 		{
 			// https://docs.microsoft.com/en-us/graph/delta-query-messages#example-to-synchronize-messages-in-a-folder

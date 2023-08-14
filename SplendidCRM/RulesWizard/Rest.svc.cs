@@ -84,7 +84,8 @@ namespace SplendidCRM.RulesWizard
 			switch ( sRULE_TYPE )
 			{
 				case "Import"  :  ruleType = typeof(SplendidImportThis );  break;
-				case "Report"  :  ruleType = typeof(SplendidControlThis);  break;
+				// 08/12/2023 Paul.  Should be SplendidReportThis. 
+				case "Report"  :  ruleType = typeof(SplendidReportThis);  break;
 				case "Business":  ruleType = typeof(SplendidControlThis);  break;
 				case "Wizard"  :  ruleType = typeof(SplendidWizardThis );  break;
 				default        :  throw(new Exception("Unknown rule type: " + sRULE_TYPE));
@@ -146,6 +147,8 @@ namespace SplendidCRM.RulesWizard
 					case "NAME"             :  sNAME                = Sql.ToString(dict[sColumnName]);  break;
 					// 02/09/2022 Paul.  Keep using MODULE to match Reports. 
 					case "MODULE"           :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
+					// 08/01/2023 Paul.  Must keep MODULE_NAME as that is what is used by RulesWizard.EditView. 
+					case "MODULE_NAME"      :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
 					case "RELATED"          :  sRELATED             = Sql.ToString(dict[sColumnName]);  break;
 					case "RULE_TYPE"        :  sRULE_TYPE           = Sql.ToString(dict[sColumnName]);  break;
 					case "filterXml"        :  dictFilterXml        = dict[sColumnName] as Dictionary<string, object>;  break;
@@ -189,7 +192,8 @@ namespace SplendidCRM.RulesWizard
 			switch ( sRULE_TYPE )
 			{
 				case "Import"  :  ruleType = typeof(SplendidImportThis );  break;
-				case "Report"  :  ruleType = typeof(SplendidControlThis);  break;
+				// 08/12/2023 Paul.  Should be SplendidReportThis. 
+				case "Report"  :  ruleType = typeof(SplendidReportThis);  break;
 				case "Business":  ruleType = typeof(SplendidControlThis);  break;
 				case "Wizard"  :  ruleType = typeof(SplendidWizardThis );  break;
 				default        :  throw(new Exception("Unknown rule type: " + sRULE_TYPE));
@@ -285,6 +289,8 @@ namespace SplendidCRM.RulesWizard
 					case "NAME"             :  sNAME                = Sql.ToString(dict[sColumnName]);  break;
 					// 02/09/2022 Paul.  Keep using MODULE to match Reports. 
 					case "MODULE"           :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
+					// 08/12/2023 Paul.  Must keep MODULE_NAME as that is what is used by RulesWizard.EditView. 
+					case "MODULE_NAME"      :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
 					case "RELATED"          :  sRELATED             = Sql.ToString(dict[sColumnName]);  break;
 					case "filterXml"        :  dictFilterXml        = dict[sColumnName] as Dictionary<string, object>;  break;
 					case "relatedModuleXml" :  dictRelatedModuleXml = dict[sColumnName] as Dictionary<string, object>;  break;
@@ -569,6 +575,8 @@ namespace SplendidCRM.RulesWizard
 					case "NAME"             :  sNAME                = Sql.ToString (dict[sColumnName]);  break;
 					// 02/09/2022 Paul.  Keep using MODULE to match Reports. 
 					case "MODULE"           :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
+					// 08/12/2023 Paul.  Must keep MODULE_NAME as that is what is used by RulesWizard.EditView. 
+					case "MODULE_NAME"      :  sMODULE              = Sql.ToString(dict[sColumnName]);  break;
 					case "RELATED"          :  sRELATED             = Sql.ToString (dict[sColumnName]);  break;
 					case "ASSIGNED_USER_ID" :  gASSIGNED_USER_ID    = Sql.ToGuid   (dict[sColumnName]);  break;
 					case "ASSIGNED_SET_LIST":  sASSIGNED_SET_LIST   = Sql.ToString (dict[sColumnName]);  break;
