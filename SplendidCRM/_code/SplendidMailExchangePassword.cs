@@ -37,6 +37,8 @@ namespace SplendidCRM
 
 		public SplendidMailExchangePassword(HttpApplicationState Application)
 		{
+			// 11/19/2023 Paul.  Must save Application for use in Send(). 
+			this.Application = Application;
 			this.sSERVER_URL = Sql.ToString(Application["CONFIG.Exchange.ServerURL"]);
 			this.sUSER_NAME  = Sql.ToString(Application["CONFIG.smtpuser"          ]);
 			this.sPASSWORD   = Sql.ToString(Application["CONFIG.smtppass"          ]);

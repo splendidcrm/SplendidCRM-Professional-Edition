@@ -1,6 +1,8 @@
 # SplendidCRM Professional Edition
 ## Get Started
 
+SplendidCRM Professional is provided here to allow you to evaluate the software.  It is still governed under the SplendidCRM Source Code License, so it is not free.  If you use this software in production, you are expected to obtain a license for each user.
+
 The quickest way to get started is to request our installer. The installer will do practically everything you need to get a SplendidCRM site up and running, with the exception of installing SQL Server Express. Or, you can download the latest from GitHub and build the app yourself.
 Please contact our sales team to license SplendidCRM Professional. 
 

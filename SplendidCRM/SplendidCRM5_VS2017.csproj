@@ -5413,6 +5413,7 @@
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\MessageSerializer.cs" />
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\OnlineMeetingInfoSerializer.cs" />
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\OutlookGeoCoordinatesSerializer.cs" />
+    <Compile Include="_code\Spring.Social.Office365\Api\Serializers\OutlookItemSerializer.cs" />
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\PatternedRecurrenceSerializer.cs" />
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\PhoneSerializer.cs" />
     <Compile Include="_code\Spring.Social.Office365\Api\Serializers\PhysicalAddressSerializer.cs" />

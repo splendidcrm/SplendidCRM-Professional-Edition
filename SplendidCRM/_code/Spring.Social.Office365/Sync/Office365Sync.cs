@@ -2647,6 +2647,52 @@ namespace Spring.Social.Office365
 			}
 		}
 
+		// 11/22/2023 Paul.  When unsyncing, we need to immediately clear the remote flag. 
+		public static void UnsyncContact(HttpContext Context, Guid gUSER_ID, string sEXCHANGE_ALIAS, Guid gCONTACT_ID, string sREMOTE_KEY)
+		{
+			try
+			{
+				HttpApplicationState Application = Context.Application;
+				ExchangeSession Session = ExchangeSecurity.LoadUserACL(Application, gUSER_ID);
+				string sOAUTH_CLIENT_ID       = Sql.ToString(Application["CONFIG.Exchange.ClientID"         ]);
+				string sOAUTH_CLIENT_SECRET   = Sql.ToString(Application["CONFIG.Exchange.ClientSecret"     ]);
+				string sOAuthDirectoryTenatID = Sql.ToString(Application["CONFIG.Exchange.DirectoryTenantID"]);
+				string sCONTACTS_CATEGORY     = Sql.ToString(Application["CONFIG.Exchange.Contacts.Category"]);
+				Office365AccessToken token = ActiveDirectory.Office365RefreshAccessToken(Application, sOAuthDirectoryTenatID, sOAUTH_CLIENT_ID, sOAUTH_CLIENT_SECRET, gUSER_ID, false);
+				Spring.Social.Office365.Api.IOffice365 service = CreateApi(Application, token.access_token);
+				SplendidCRM.DbProviderFactory dbf = SplendidCRM.DbProviderFactories.GetFactory(Application);
+				using ( IDbConnection con = dbf.CreateConnection() )
+				{
+					con.Open();
+					bool bVERBOSE_STATUS = Sql.ToBoolean(Application["CONFIG.Exchange.VerboseStatus"]);
+					if ( bVERBOSE_STATUS )
+						SyncError.SystemMessage(Context, "Warning", new StackTrace(true).GetFrame(0), "Office365Sync.UnsyncContact: for " + sEXCHANGE_ALIAS + " to " + sREMOTE_KEY + ".");
+					
+					service.ContactOperations.Unsync(sREMOTE_KEY, sCONTACTS_CATEGORY);
+					using ( IDbTransaction trn = Sql.BeginTransaction(con) )
+					{
+						try
+						{
+							SqlProcs.spCONTACTS_SYNC_Delete(gUSER_ID, gCONTACT_ID, sREMOTE_KEY, "Exchange", trn);
+							trn.Commit();
+						}
+						catch
+						{
+							trn.Rollback();
+							throw;
+						}
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				string sError = "Office365Sync.UnsyncContact: for " + sEXCHANGE_ALIAS + " to " + sREMOTE_KEY + "." + ControlChars.CrLf;
+				sError += Utils.ExpandException(ex) + ControlChars.CrLf;
+				SyncError.SystemMessage(Context, "Error", new StackTrace(true).GetFrame(0), sError);
+				SplendidError.SystemMessage(Context, "Error", new StackTrace(true).GetFrame(0), sError);
+			}
+		}
+
 		public static void ImportContact(HttpContext Context, Guid gUSER_ID, string sREMOTE_KEY)
 		{
 			string sEXCHANGE_ALIAS = String.Empty;;
