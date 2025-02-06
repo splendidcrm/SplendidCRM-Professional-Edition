@@ -203,7 +203,8 @@ namespace SplendidCRM.Surveys
 													}
 													case "tab"  :
 													{
-														Response.ContentType = "text/txt";
+														// 08/17/2024 Paul.  The correct MIME type is text/plain. 
+														Response.ContentType = "text/plain";
 														Response.AddHeader("Content-Disposition", "attachment;filename=" + Utils.ContentDispositionEncode(Request.Browser, sFilename + ".txt"));
 														StreamWriter wt = new StreamWriter(Response.OutputStream);
 														if ( !Sql.IsEmptyString(sTitle    ) ) wt.WriteLine(sTitle    );

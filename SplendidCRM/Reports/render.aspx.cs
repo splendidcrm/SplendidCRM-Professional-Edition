@@ -104,7 +104,8 @@ namespace SplendidCRM.Reports
 			{
 				SplendidError.SystemError(new StackTrace(true).GetFrame(0), ex);
 				// 05/10/2009 Paul.  If there is an error, it is useful to dump the error. 
-				Response.ContentType = "text/txt";
+				// 08/17/2024 Paul.  The correct MIME type is text/plain. 
+				Response.ContentType = "text/plain";
 				Response.Clear();
 				// 01/24/2010 Paul.  HTML should not be used in a text error. 
 				string sError = Utils.ExpandException(ex);

@@ -946,6 +946,10 @@
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Administration\DynamicLayout\EditRelationships\export.aspx.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Administration\DynamicLayout\EditRelationships\ListView.ascx.cs">
       <DependentUpon>ListView.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -984,6 +988,10 @@
     </Compile>
     <Compile Include="Administration\DynamicLayout\html5\ListView.ascx.cs">
       <DependentUpon>ListView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\DynamicLayout\Relationships\export.aspx.cs">
+      <DependentUpon>export.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administration\EditCustomFields\export.aspx.cs">
@@ -8102,6 +8110,7 @@
     <Content Include="Administration\DynamicLayout\DetailViews\NewRecord.ascx" />
     <Content Include="Administration\DynamicLayout\DetailViews\Popup.aspx" />
     <Content Include="Administration\DynamicLayout\DetailViews\PopupView.ascx" />
+    <Content Include="Administration\DynamicLayout\EditRelationships\export.aspx" />
     <Content Include="Administration\DynamicLayout\EditViews\default.aspx" />
     <Content Include="Administration\DynamicLayout\EditViews\EditView.ascx" />
     <Content Include="Administration\DynamicLayout\EditViews\NewRecord.ascx" />
@@ -8123,6 +8132,7 @@
     <Content Include="Administration\DynamicLayout\html5\LayoutTerminologyUI.js" />
     <Content Include="Administration\DynamicLayout\html5\ListView.ascx" />
     <Content Include="Administration\DynamicLayout\ListView.ascx" />
+    <Content Include="Administration\DynamicLayout\Relationships\export.aspx" />
     <Content Include="Administration\DynamicLayout\_controls\LayoutButtons.ascx" />
     <Content Include="Administration\DynamicLayout\_controls\SearchBasic.ascx" />
     <Content Include="Administration\EditCustomFields\default.aspx" />

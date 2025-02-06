@@ -372,6 +372,8 @@ namespace SplendidCRM.MailMerge
 					{
 						Response.Clear();
 						Response.ContentType = sFILE_MIME_TYPE;
+						// 10/24/2024 Paul.  ContentType is being ignored and returning application/octet-stream. 
+						WebOperationContext.Current.OutgoingResponse.ContentType = sFILE_MIME_TYPE;
 						Response.AddHeader("Content-Disposition", "attachment;filename=" + Utils.ContentDispositionEncode(Request.Browser, sFILENAME));
 						byResponse = lstParts[0];
 					}
@@ -395,6 +397,8 @@ namespace SplendidCRM.MailMerge
 							
 							Response.Clear();
 							Response.ContentType = sFILE_MIME_TYPE;
+							// 10/24/2024 Paul.  ContentType is being ignored and returning application/octet-stream. 
+							WebOperationContext.Current.OutgoingResponse.ContentType = sFILE_MIME_TYPE;
 							Response.AddHeader("Content-Disposition", "attachment;filename=" + Utils.ContentDispositionEncode(Request.Browser, sFILENAME));
 							// 05/12/2011 Paul.  We need to use stm.ToArray() as stm.GetBuffer() causes an error: "There was an error opening the file."
 							stm.Seek(0, SeekOrigin.Begin);

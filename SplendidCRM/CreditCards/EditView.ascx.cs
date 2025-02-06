@@ -185,7 +185,8 @@ namespace SplendidCRM.CreditCards
 							{
 								int nMonth = new DynamicControl(this, "EXPIRATION_MONTH").IntegerValue;
 								int nYear  = new DynamicControl(this, "EXPIRATION_YEAR" ).IntegerValue;
-								if ( nMonth >= 1 && nMonth <= 12 && nYear >= 2000 && nYear <= 2030 )
+								int nMaxYear = DateTime.Now.Year + 15;
+								if ( nMonth >= 1 && nMonth <= 12 && nYear >= 2000 && nYear <= nMaxYear )
 								{
 									dtEXPIRATION_DATE = new DateTime(nYear, nMonth, 1, 12, 0, 0);
 								}
