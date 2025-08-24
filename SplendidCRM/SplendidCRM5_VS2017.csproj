@@ -109,6 +109,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BackupBin2012\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -123,15 +127,21 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BackupBin2012\Microsoft.IdentityModel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocols">
       <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Protocols.dll</HintPath>
@@ -139,8 +149,9 @@
     <Reference Include="Microsoft.IdentityModel.Protocols.WsFederation">
       <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Protocols.WsFederation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens.Saml">
       <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Tokens.Saml.dll</HintPath>
@@ -193,7 +204,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2012\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\BackupBin2022\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="oAuthConnection">
       <HintPath>..\BackupBin2012\oAuthConnection.dll</HintPath>
@@ -220,6 +231,10 @@
       <HintPath>..\BackupBin2012\Streaminvi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
@@ -233,10 +248,38 @@
     <Reference Include="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry">
       <HintPath>..\BackupBin2012\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Net.Http.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BackupBin2025\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -922,6 +965,17 @@
       <DependentUpon>view.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Administration\DuoUniversal\ConfigView.ascx.cs">
+      <DependentUpon>ConfigView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\DuoUniversal\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\DuoUniversal\Rest.svc.cs">
+      <DependentUpon>Rest.svc</DependentUpon>
+    </Compile>
     <Compile Include="Administration\DynamicButtons\export.aspx.cs">
       <DependentUpon>export.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1170,6 +1224,9 @@
     </Compile>
     <Compile Include="Administration\iContact\Rest.svc.cs">
       <DependentUpon>Rest.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Impersonation.svc.cs">
+      <DependentUpon>Impersonation.svc</DependentUpon>
     </Compile>
     <Compile Include="Administration\Import\Rest.svc.cs">
       <DependentUpon>Rest.svc</DependentUpon>
@@ -4920,6 +4977,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="_code\DbAcrhiveFactories.cs" />
+    <Compile Include="_code\DuoUniversal\CertificatePinnerFactory.cs" />
+    <Compile Include="_code\DuoUniversal\Client.cs" />
+    <Compile Include="_code\DuoUniversal\DuoException.cs" />
+    <Compile Include="_code\DuoUniversal\JwtUtils.cs" />
+    <Compile Include="_code\DuoUniversal\Labels.cs" />
+    <Compile Include="_code\DuoUniversal\Models.cs" />
+    <Compile Include="_code\DuoUniversal\Utils.cs" />
     <Compile Include="_code\Excel\Excel2007Reader.cs" />
     <Compile Include="_code\ExchangeNotificationService.cs" />
     <Compile Include="_code\ExchangeSecurity.cs" />
@@ -8103,6 +8167,9 @@
     <Content Include="Administration\Dropdown\ListView.ascx" />
     <Content Include="Administration\Dropdown\Popup.aspx" />
     <Content Include="Administration\Dropdown\SearchBasic.ascx" />
+    <Content Include="Administration\DuoUniversal\ConfigView.ascx" />
+    <Content Include="Administration\DuoUniversal\default.aspx" />
+    <Content Include="Administration\DuoUniversal\Rest.svc" />
     <Content Include="Administration\DynamicButtons\view.aspx" />
     <Content Include="Administration\DynamicLayout\default.aspx" />
     <Content Include="Administration\DynamicLayout\DetailViews\default.aspx" />
@@ -8175,6 +8242,7 @@
     <Content Include="Administration\iContact\default.aspx" />
     <Content Include="Administration\iContact\DetailView.ascx" />
     <Content Include="Administration\iContact\Rest.svc" />
+    <Content Include="Administration\Impersonation.svc" />
     <Content Include="Administration\Import\default.aspx" />
     <Content Include="Administration\Import\ListView.ascx" />
     <Content Include="Administration\Import\Rest.svc" />
@@ -12302,6 +12370,7 @@
     <Content Include="_controls\MetaHeader.ascx" />
     <Content Include="_controls\ModuleHeader.ascx" />
     <Content Include="_controls\Shortcuts.ascx" />
+    <Content Include="_code\DuoUniversal\ca_certs.pem" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Accounts\ActivitiesHistory.ascx" />
