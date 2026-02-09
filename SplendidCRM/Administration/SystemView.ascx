@@ -34,6 +34,7 @@
 || SplendidCRM.Security.AdminUserAccess("ZipCodes"      , "access") >= 0 
 || SplendidCRM.Security.AdminUserAccess("NAICSCodes"    , "access") >= 0 
 || SplendidCRM.Security.AdminUserAccess("ModulesArchiveRules", "access") >= 0 
+|| SplendidCRM.Security.AdminUserAccess("ReplicationTables", "access") >= 0 
 ) %>' runat="server">
 	<%@ Register TagPrefix="SplendidCRM" Tagname="ListHeader" Src="~/_controls/ListHeader.ascx" %>
 	<SplendidCRM:ListHeader Title="Administration.LBL_ADMINISTRATION_HOME_TITLE" Runat="Server" />
@@ -205,8 +206,15 @@
 			<asp:TableCell CssClass="tabDetailViewDF2" Visible='<%# SplendidCRM.Security.IS_ADMIN && Utils.CachedFileExists(Context, "~/Administration/ModulesArchiveRules/default.aspx") %>'>
 				<asp:Label Text='<%# L10n.Term("Administration.LBL_MODULE_ARCHIVE_RULES") %>' runat="server" />
 			</asp:TableCell>
-			<asp:TableCell CssClass="tabDetailViewDL2" Visible='<%# SplendidCRM.Security.IS_ADMIN && Utils.CachedFileExists(Context, "~/Administration/ModulesArchiveRules/default.aspx") %>'></asp:TableCell>
-			<asp:TableCell CssClass="tabDetailViewDF2" Visible='<%# SplendidCRM.Security.IS_ADMIN && Utils.CachedFileExists(Context, "~/Administration/ModulesArchiveRules/default.aspx") %>'></asp:TableCell>
+			<%-- 12/31/2025 Paul.  Add Replication.  --%>
+			<asp:TableCell CssClass="tabDetailViewDL2" Visible='<%# SplendidCRM.Security.IS_ADMIN && Utils.CachedFileExists(Context, "~/Administration/ReplicationTables/default.aspx") %>'>
+				<asp:Image SkinID="Backups" AlternateText='<%# L10n.Term("Administration.LBL_DATABASE_REPLICATION_TITLE") %>' Runat="server" />
+				&nbsp;
+				<asp:HyperLink Text='<%# L10n.Term("Administration.LBL_DATABASE_REPLICATION_TITLE") %>' NavigateUrl="~/Administration/ReplicationTables/default.aspx" CssClass="tabDetailViewDL2Link" Runat="server" />
+			</asp:TableCell>
+			<asp:TableCell CssClass="tabDetailViewDF2" Visible='<%# SplendidCRM.Security.IS_ADMIN && Utils.CachedFileExists(Context, "~/Administration/ReplicationTables/default.aspx") %>'>
+				<asp:Label Text='<%# L10n.Term("Administration.LBL_DATABASE_REPLICATION") %>' runat="server" />
+			</asp:TableCell>
 		</asp:TableRow>
 	</asp:Table>
 </div>

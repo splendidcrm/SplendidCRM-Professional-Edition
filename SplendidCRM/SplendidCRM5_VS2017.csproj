@@ -1697,6 +1697,25 @@
       <DependentUpon>view.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Administration\ReplicationTables\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ReplicationTables\DetailView.ascx.cs">
+      <DependentUpon>DetailView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ReplicationTables\ListView.ascx.cs">
+      <DependentUpon>ListView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ReplicationTables\MassUpdate.ascx.cs">
+      <DependentUpon>MassUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ReplicationTables\Rest.svc.cs">
+      <DependentUpon>Rest.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ReplicationTables\view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Administration\Rest.svc.cs">
       <DependentUpon>Rest.svc</DependentUpon>
     </Compile>
@@ -4977,6 +4996,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="_code\DbAcrhiveFactories.cs" />
+    <Compile Include="_code\DbReplicationFactories.cs" />
     <Compile Include="_code\DuoUniversal\CertificatePinnerFactory.cs" />
     <Compile Include="_code\DuoUniversal\Client.cs" />
     <Compile Include="_code\DuoUniversal\DuoException.cs" />
@@ -5064,6 +5084,7 @@
     <Compile Include="_code\QuickBooks\QuickBooksClientFactory.cs" />
     <Compile Include="_code\QuickBooks\QuickBooksSync.cs" />
     <Compile Include="_code\RdlLoad.cs" />
+    <Compile Include="_code\ReplicationExternalDB.cs" />
     <Compile Include="_code\RestUtil.cs" />
     <Compile Include="_code\RulesUtil.cs" />
     <Compile Include="_code\SignalR\AsteriskManager.cs" />
@@ -8391,6 +8412,12 @@
     <Content Include="Administration\RenameTabs\ListView.ascx" />
     <Content Include="Administration\RenameTabs\Popup.aspx" />
     <Content Include="Administration\RenameTabs\SearchBasic.ascx" />
+    <Content Include="Administration\ReplicationTables\default.aspx" />
+    <Content Include="Administration\ReplicationTables\DetailView.ascx" />
+    <Content Include="Administration\ReplicationTables\ListView.ascx" />
+    <Content Include="Administration\ReplicationTables\MassUpdate.ascx" />
+    <Content Include="Administration\ReplicationTables\Rest.svc" />
+    <Content Include="Administration\ReplicationTables\view.aspx" />
     <Content Include="Administration\Rest.svc" />
     <Content Include="Administration\Roles\default.aspx" />
     <Content Include="Administration\Roles\DetailView.ascx" />
