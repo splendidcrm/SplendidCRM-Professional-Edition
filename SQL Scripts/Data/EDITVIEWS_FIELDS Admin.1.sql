@@ -709,6 +709,7 @@ if not exists(select * from EDITVIEWS_FIELDS where EDIT_NAME = 'Configurator.Adm
 end -- if;
 GO
 
+-- 08/09/2026 Paul.  Fix Time Format. 
 -- delete from EDITVIEWS_FIELDS where EDIT_NAME = 'Configurator.AdminWizard.Locale';
 if not exists(select * from EDITVIEWS_FIELDS where EDIT_NAME = 'Configurator.AdminWizard.Locale' and DELETED = 0) begin -- then
 	print 'EDITVIEWS_FIELDS Configurator.AdminWizard.Locale';
@@ -716,9 +717,21 @@ if not exists(select * from EDITVIEWS_FIELDS where EDIT_NAME = 'Configurator.Adm
 	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  0, 'Users.LBL_LANGUAGE'                     , 'default_language'       , 0, 2, 'Languages'       , null, null, null;
 	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  1, 'Users.LBL_CURRENCY'                     , 'default_currency'       , 0, 2, 'Currencies'      , null, null, null;
 	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  2, 'Users.LBL_DATE_FORMAT'                  , 'default_date_format'    , 0, 2, 'DateFormat.en-US', null, null, null;
-	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  3, 'Users.LBL_TIME_FORMAT'                  , 'default_language'       , 0, 2, 'TimeForamt.en-US', null, null, null;
+	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  3, 'Users.LBL_TIME_FORMAT'                  , 'default_time_format'    , 0, 2, 'TimeForamt.en-US', null, null, null;
 	exec dbo.spEDITVIEWS_FIELDS_InsBoundList   'Configurator.AdminWizard.Locale' ,  4, 'Users.LBL_TIMEZONE'                     , 'default_timezone'       , 0, 2, 'TimeZones'       , null, null, null;
 	exec dbo.spEDITVIEWS_FIELDS_InsBlank       'Configurator.AdminWizard.Locale' ,  5, null;
+end else begin
+	-- 08/09/2026 Paul.  Fix Time Format. 
+	if exists(select * from EDITVIEWS_FIELDS where EDIT_NAME = 'Configurator.AdminWizard.Locale' and DATA_FIELD = 'default_language' and CACHE_NAME = 'TimeForamt.en-US' and DELETED = 0) begin -- then
+		update EDITVIEWS_FIELDS
+		   set DATA_FIELD        = 'default_time_format'
+		     , DATE_MODIFIED     = getdate()
+		     , DATE_MODIFIED_UTC = getutcdate()
+		 where EDIT_NAME         = 'Configurator.AdminWizard.Locale'
+		   and DATA_FIELD        = 'default_language'
+		   and CACHE_NAME        = 'TimeForamt.en-US'
+		   and DELETED           = 0;
+	end -- if;
 end -- if;
 GO
 

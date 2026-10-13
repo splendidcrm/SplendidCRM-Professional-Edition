@@ -111,7 +111,7 @@
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -129,7 +129,7 @@
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -137,27 +137,27 @@
     </Reference>
     <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Logging, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocols">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Protocols.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Protocols.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocols.WsFederation">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Protocols.WsFederation.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Protocols.WsFederation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens.Saml">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Tokens.Saml.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Tokens.Saml.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Xml">
-      <HintPath>..\BackupBin2021\Microsoft.IdentityModel.Xml.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.IdentityModel.Xml.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin">
       <HintPath>..\BackupBin2012\Microsoft.Owin.dll</HintPath>
@@ -171,23 +171,23 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2016\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2016\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2016\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2016\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.ReportViewer.WebForms.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2016\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\BackupBin2012\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -204,7 +204,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2022\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\BackupBin2012\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="oAuthConnection">
       <HintPath>..\BackupBin2012\oAuthConnection.dll</HintPath>
@@ -214,7 +214,7 @@
       <HintPath>..\BackupBin2012\Owin.dll</HintPath>
     </Reference>
     <Reference Include="PayPal">
-      <HintPath>..\BackupBin Net 4.5\PayPal 1.5\PayPal.dll</HintPath>
+      <HintPath>..\BackupBin2012\PayPal.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\BackupBin2012\RestSharp.dll</HintPath>
@@ -233,7 +233,7 @@
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Buffers.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -243,42 +243,42 @@
     <Reference Include="System.identitymodel.services" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2021\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry">
       <HintPath>..\BackupBin2012\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Memory.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Net.Http.Json.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Net.Http.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Numerics.Vectors.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Text.Json.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2025\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\BackupBin2012\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -306,7 +306,7 @@
     </Reference>
     <Reference Include="Twilio, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BackupBin2022\Twilio.dll</HintPath>
+      <HintPath>..\BackupBin2012\Twilio.dll</HintPath>
     </Reference>
     <Reference Include="TwitterToken">
       <HintPath>..\BackupBin2012\TwitterToken.dll</HintPath>

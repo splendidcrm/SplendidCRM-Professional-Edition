@@ -23,6 +23,7 @@ GO
 -- 10/30/2013 Paul.  Increase size of URL_TARGET. 
 -- 02/25/2015 Paul.  Increase size of DATA_FIELD and DATA_FORMAT for OfficeAddin. 
 -- 02/21/2017 Paul.  Allow a field to be added to the end using an index of -1. 
+-- 07/01/2026 Paul.  Add MODULE_TYPE and PARENT_FIELD. 
 Create Procedure dbo.spDETAILVIEWS_FIELDS_InsertOnly
 	( @DETAIL_NAME       nvarchar( 50)
 	, @FIELD_INDEX       int
@@ -36,6 +37,8 @@ Create Procedure dbo.spDETAILVIEWS_FIELDS_InsertOnly
 	, @LIST_NAME         nvarchar( 50)
 	, @COLSPAN           int
 	, @TOOL_TIP          nvarchar(150) = null
+	, @MODULE_TYPE       nvarchar(25) = null
+	, @PARENT_FIELD      nvarchar(30) = null
 	)
 as
   begin
@@ -90,6 +93,8 @@ as
 			, LIST_NAME        
 			, COLSPAN          
 			, TOOL_TIP         
+			, MODULE_TYPE      
+			, PARENT_FIELD     
 			)
 		values 
 			( @ID               
@@ -109,6 +114,8 @@ as
 			, @LIST_NAME        
 			, @COLSPAN          
 			, @TOOL_TIP         
+			, @MODULE_TYPE      
+			, @PARENT_FIELD     
 			);
 	end -- if;
   end

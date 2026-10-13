@@ -202,6 +202,8 @@ namespace SplendidCRM.SurveyResults
 				DbProviderFactory dbf = DbProviderFactories.GetFactory();
 				using ( IDbConnection con = dbf.CreateConnection() )
 				{
+					// 08/11/2026 Paul.  Missing open. 
+					con.Open();
 					using ( IDbCommand cmd = con.CreateCommand() )
 					{
 						// 12/30/2015 Paul.  Change to vwSURVEY_RESULTS_List as vwSURVEY_RESULTS is needed for Query Builder. 
